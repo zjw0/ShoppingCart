@@ -24,8 +24,6 @@ import java.util.Map;
 
 public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, BaseViewHolder> {
 
-    private int numberMin = 1;
-
     public ShoppingCartListAdapter(int layoutResId, @Nullable List<ShoppingCartList> data) {
         super(layoutResId, data);
     }
@@ -51,7 +49,7 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
             }
         });
         //增加商品数量
-        helper.getView(R.id.iv_jian).setOnClickListener(new View.OnClickListener() {
+        helper.getView(R.id.iv_jia).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO 增加
@@ -59,7 +57,7 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
             }
         });
         //减少商品数量
-        helper.getView(R.id.iv_jia).setOnClickListener(new View.OnClickListener() {
+        helper.getView(R.id.iv_jian).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO 减少
@@ -74,7 +72,6 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
                 }
             }
         });
-
     }
 
 
