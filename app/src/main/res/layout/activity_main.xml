@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title_bar">
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            style="@style/SimpleTextView"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:id="@+id/tv_title_right_text"
+            style="@style/SimpleTextView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_big"
+            android:text="编辑"
+            android:textColor="@color/color_red" />
+
+    </RelativeLayout>
+
+    <View style="@style/HorizontalLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shopping_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <View style="@style/HorizontalLine"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_normal">
+
+        <RadioButton
+            android:id="@+id/rb_all_select_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:padding="@dimen/padding_big"
+            android:drawableLeft="@drawable/selector_normal_selected"
+            android:drawablePadding="@dimen/padding_small"
+            android:text="全选"
+            android:textSize="@dimen/text_big"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_delete_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_to_collect"
+                style="@style/SimpleTextView"
+                android:layout_marginRight="@dimen/padding_huge"
+                android:layout_toLeftOf="@+id/tv_to_delete"
+                android:background="@drawable/shape_solid_white_2dp_stroke_theme"
+                android:padding="@dimen/padding_normal"
+                android:text="移入收藏" />
+
+            <TextView
+                android:id="@+id/tv_to_delete"
+                style="@style/SimpleTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/padding_huge"
+                android:background="@drawable/shape_solid_red_2dp_stroke_theme"
+                android:padding="@dimen/padding_normal"
+                android:text="删除商品"
+                android:textColor="@color/color_white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_to_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_he_ji"
+                style="@style/SimpleTextView"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_money_number"
+                android:paddingRight="@dimen/padding_small"
+                android:text="合计:" />
+
+            <TextView
+                android:id="@+id/tv_money_number"
+                style="@style/SimpleTextView"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_huge"
+                android:layout_toLeftOf="@+id/tv_all_money"
+                android:text="¥0.00"
+                android:gravity="left"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/text_big" />
+
+            <TextView
+                android:id="@+id/tv_all_money"
+                style="@style/SimpleTextView"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/color_red"
+                android:padding="@dimen/padding_big"
+                android:text="去结算"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_big" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

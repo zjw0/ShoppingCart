@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_140">140dp</dimen>
+    <dimen name="height_240">240dp</dimen>
+    <dimen name="height_280">280dp</dimen>
+    <dimen name="height_big">64dp</dimen>
+
+    <dimen name="height_divider">0.5dp</dimen>
+    <dimen name="height_divider_large">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_72">72dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="height_huge">160dp</dimen>
+    <dimen name="height_large">96dp</dimen>
+    <dimen name="height_little">32dp</dimen>
+    <dimen name="height_normal">48dp</dimen>
+    <dimen name="height_small">40dp</dimen>
+    <dimen name="height_title_bar">48dp</dimen>
+    <dimen name="padding_big">12dp</dimen>
+    <dimen name="padding_huge">24dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="text_big">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_little">10sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+</resources>

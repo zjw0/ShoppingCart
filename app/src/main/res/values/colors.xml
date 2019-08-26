@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C50200</color>
+    <color name="colorPrimaryDark">#C50200</color>
+    <color name="colorAccent">#C50200</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_red">#C50200</color>
+    <color name="line_color">#e1dede</color>
+    <color name="gray_text">#666666</color>
+    <color name="color_black">#000000</color>
+
+    <color name="colorText">#333333</color>
+    <color name="colorTextDarkerGray">#666666</color>
+    <color name="colorTextHint">#bbbbbb</color>
+    <color name="colorTextLighterGray">#aaaaaa</color>
+    <color name="colorTranslucence">#50000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorDivider">#e6e6e6</color>
+
+</resources>
