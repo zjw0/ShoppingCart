@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_huge"
+        android:layout_marginStart="@dimen/padding_huge"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            style="@style/SimpleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_normal"
+            android:layout_marginBottom="@dimen/height_big"
+            android:background="@drawable/shape_solid_white_15dp_stroke_theme"
+            android:hint="账号" />
+
+        <EditText
+            android:id="@+id/et_password_number"
+            style="@style/SimpleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_normal"
+            android:background="@drawable/shape_solid_white_15dp_stroke_theme"
+            android:hint="密码" />
+
+        <TextView
+            android:id="@+id/tv_login_in"
+            style="@style/SimpleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_normal"
+            android:layout_marginTop="@dimen/height_large"
+            android:background="@drawable/shape_solid_white_15dp_stroke_theme"
+            android:text="登录" />
+
+    </LinearLayout>
+
+</LinearLayout>

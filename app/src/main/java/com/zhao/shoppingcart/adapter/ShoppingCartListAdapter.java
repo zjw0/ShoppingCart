@@ -31,7 +31,8 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
     @Override
     protected void convert(final BaseViewHolder helper, final ShoppingCartList item) {
         final TextView tvGoodsCount = helper.getView(R.id.tv_goods_count);
-        Glide.with(mContext).load(item.img).into((ImageView) helper.getView(R.id.iv_goods_img));
+        Glide.with(mContext).load(R.drawable.eat_watermelon_girl).into((ImageView) helper.getView(R.id.iv_goods_img));
+        //Glide.with(mContext).load(item.img).into((ImageView) helper.getView(R.id.iv_goods_img));
         helper.setText(R.id.tv_goods_name, item.name);
         helper.setText(R.id.tv_goods_price, "¥ " + /*AtyUtils.get2Point*/(item.price));
         helper.setChecked(R.id.rb_select_goods, item.isSelected);
@@ -63,9 +64,9 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
                 // TODO 减少
                 int count = TextUtils.isEmpty(item.num) ? 0 : Integer.parseInt(item.num);
                 if (count <= 1) {
-                    Toast.makeText(mContext, "宝贝不能在减少了哦！",
-                            Toast.LENGTH_SHORT).show();
-                    //ToastUtil.showToast(mContext, "宝贝不能在减少了哦！");
+//                    Toast.makeText(mContext, "宝贝不能在减少了哦！",
+//                            Toast.LENGTH_SHORT).show();
+                    ToastUtil.showToast(mContext, "宝贝不能在减少了哦！");
                 }
                 else {
                     MainActivity.editGoodsCount(mContext, item, 2, 1, tvGoodsCount);

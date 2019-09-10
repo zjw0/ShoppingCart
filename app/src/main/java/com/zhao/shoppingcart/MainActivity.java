@@ -1,6 +1,7 @@
 package com.zhao.shoppingcart;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rbAllSelectGoods.setOnClickListener(this);
         tvToCollect.setOnClickListener(this);
         tvToDelete.setOnClickListener(this);
+        tvAllMoney.setOnClickListener(this);
 
     }
 
@@ -172,6 +174,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             //确认订单
             case R.id.tv_all_money:
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
