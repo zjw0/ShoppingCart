@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--android:background="@drawable/shape_solid_white_6dp"-->
+
+
+    <LinearLayout
+        android:id="@+id/ll_goods_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_select_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_normal_selected"
+                android:padding="@dimen/padding_big" />
+
+            <ImageView
+                android:id="@+id/iv_goods_img"
+                android:layout_width="@dimen/height_large"
+                android:layout_height="@dimen/height_large"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_big">
+
+                <TextView
+                    android:id="@+id/tv_goods_name"
+                    style="@style/SimpleTextView"
+                    android:layout_width="match_parent"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:singleLine="false" />
+
+                <TextView
+                    android:id="@+id/tv_goods_type"
+                    style="@style/SimpleTextView"
+                    android:gravity="start"
+                    android:padding="@dimen/padding_small"
+                    android:text="商品规格"
+                    android:textColor="@color/colorTextLighterGray"
+                    android:textSize="@dimen/text_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_big"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_goods_price"
+                        style="@style/SimpleTextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_red" />
+
+                    <ImageView
+                        android:id="@+id/iv_jian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_normal"
+                        android:src="@drawable/cart_jian" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_count"
+                        style="@style/SimpleTextView"
+                        android:inputType="numberSigned"
+                        android:minWidth="24dp"
+                        android:paddingLeft="@dimen/padding_big"
+                        android:paddingRight="@dimen/padding_big"
+                        android:text="1" />
+
+                    <ImageView
+                        android:id="@+id/iv_jia"
+                        style="@style/SimpleTextView"
+                        android:layout_marginRight="@dimen/padding_small"
+                        android:padding="@dimen/padding_normal"
+                        android:src="@drawable/cart_jia" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/HorizontalLine" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

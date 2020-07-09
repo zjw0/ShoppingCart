@@ -9,30 +9,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="SimpleTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/colorText</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textColorHint">@color/colorTextHint</item>
-        <item name="android:background">@color/colorTransparent</item>
-        <item name="android:textSize">@dimen/text_normal</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:clickable">false</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:ellipsize">end</item>
-    </style>
 
-    <style name="HorizontalLine">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/height_divider_large</item>
-        <item name="android:background">@color/colorDivider</item>
-    </style>
-
-    <style name="VerticalLine">
-        <item name="android:layout_width">@dimen/height_divider_large</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/colorDivider</item>
-    </style>
 
 </resources>

@@ -13,6 +13,7 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.zhao.shoppingcart.utils.ToastUtil;
+import com.zhao.shoppingcart.net.API;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -52,10 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goLogin(String phone, String password) {
-        // 请求方式和请求url
-        //OkGo.<String>get("http://10.0.2.2:8080/androidlogin/servlet/LoginDateServlet?username=aaa&password=123")                            // 请求方式和请求url
-        //OkGo.<String>get("http://192.168.43.35:8080/androidlogin/servlet/LoginDateServlet?username=aaa&password=123")                            // 请求方式和请求url
-        OkGo.<String>get("http://192.168.1.107:8080/androidlogin/servlet/LoginDateServlet?username=aaa&password=123")                            // 请求方式和请求url
+        OkGo.<String>get(API.IpAll)                            // 请求方式和请求url
                 .params("username",phone)
                 .params("password",password)
                 .tag(this)                       // 请求的 tag, 主要用于取消对应的请求
@@ -73,7 +71,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onError(Response<String> response) {
                         super.onError(response);
+
                         ToastUtil.showToast(getApplicationContext(),response.message());
+
                     }
                 });
     }

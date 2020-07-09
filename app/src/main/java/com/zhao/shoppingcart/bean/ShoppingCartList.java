@@ -16,6 +16,16 @@ public class ShoppingCartList implements Serializable {
     public boolean isSelected;//是否选中
 
 
+    public ShoppingCartList(String id, String img, String name, String type, double price, String num, boolean isSelected) {
+        this.id = id;
+        this.img = img;
+        this.name = name;
+        this.type = type;
+        this.price = price;
+        this.num = num;
+        this.isSelected = isSelected;
+    }
+
     public ShoppingCartList() {
     }
 

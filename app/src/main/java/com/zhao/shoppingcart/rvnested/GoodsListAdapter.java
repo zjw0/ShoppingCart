@@ -1,14 +1,10 @@
-package com.zhao.shoppingcart.adapter;
+package com.zhao.shoppingcart.rvnested;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -16,17 +12,14 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.zhao.shoppingcart.MainActivity;
 import com.zhao.shoppingcart.R;
 import com.zhao.shoppingcart.bean.ShoppingCartList;
-import com.zhao.shoppingcart.interfaces.OnShoppingCartListener;
-import com.zhao.shoppingcart.rvnested.InfoActivity;
 import com.zhao.shoppingcart.utils.ToastUtil;
 
 import java.util.List;
-import java.util.Map;
 
 
-public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, BaseViewHolder> {
+public class GoodsListAdapter extends BaseQuickAdapter<ShoppingCartList, BaseViewHolder> {
 
-    public ShoppingCartListAdapter(int layoutResId, @Nullable List<ShoppingCartList> data) {
+    public GoodsListAdapter(int layoutResId, List<ShoppingCartList> data) {
         super(layoutResId, data);
     }
 
@@ -34,7 +27,6 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
     protected void convert(final BaseViewHolder helper, final ShoppingCartList item) {
         final TextView tvGoodsCount = helper.getView(R.id.tv_goods_count);
         Glide.with(mContext).load(R.drawable.eat_watermelon_girl).into((ImageView) helper.getView(R.id.iv_goods_img));
-        //Glide.with(mContext).load(item.img).into((ImageView) helper.getView(R.id.iv_goods_img));
         helper.setText(R.id.tv_goods_name, item.name);
         helper.setText(R.id.tv_goods_price, "¥ " + /*AtyUtils.get2Point*/(item.price));
         helper.setChecked(R.id.rb_select_goods, item.isSelected);
@@ -46,9 +38,6 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
                 item.isSelected = !item.isSelected;
                 helper.setChecked(R.id.rb_select_goods, item.isSelected);
 
-                if (onShoppingCartListener != null) {
-                    onShoppingCartListener.onShoppingCartListener();
-                }
             }
         });
         //增加商品数量
@@ -66,8 +55,6 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
                 // TODO 减少
                 int count = TextUtils.isEmpty(item.num) ? 0 : Integer.parseInt(item.num);
                 if (count <= 1) {
-//                    Toast.makeText(mContext, "宝贝不能在减少了哦！",
-//                            Toast.LENGTH_SHORT).show();
                     ToastUtil.showToast(mContext, "宝贝不能在减少了哦！");
                 }
                 else {
@@ -79,15 +66,8 @@ public class ShoppingCartListAdapter extends BaseQuickAdapter<ShoppingCartList, 
         helper.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mContext.startActivity(new Intent(mContext, InfoActivity.class));
+                mContext.startActivity(new Intent(mContext, MainActivity.class));
             }
         });
-    }
-
-
-    private OnShoppingCartListener onShoppingCartListener;
-
-    public void setOnShoppingCartListener(OnShoppingCartListener onShoppingCartListener) {
-        this.onShoppingCartListener = onShoppingCartListener;
     }
 }
